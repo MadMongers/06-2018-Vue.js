@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Conditions</title>
+<style type="text/css" rel="stylesheet">
+    td { 
+        background-color: #eee; 
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div id="app">
+
+    <button @click="filterInBusiness = !filterInBusiness">Filter In Business</button>
+
+    <table>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+        </tr>
+        <tr v-for="computer in computers" v-if="!filterInBusiness || computer.inBusiness">
+            <td>{{computer.make}}</td>
+            <td>{{computer.model}}</td>
+            <td>{{computer.year}}</td>
+        </tr>
+    </table>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    filterInBusiness : false,
+    computers : [
+        {
+            make : "Tandy",
+            model : "Color Computer 3",
+            year : 1986,
+            inBusiness : false,
+        },
+        {
+            make : "Commodore",
+            model : "64",
+            year : 1982,
+            inBusiness : false,
+        },
+        {
+            make : "Apple",
+            model : "IIe",
+            year : 1983,
+            inBusiness : true,
+        },
+    ],
+  }
+})
+</script>
+</body>
+</html>

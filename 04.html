@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Element Bindings and Shortcuts</title>
+<style type="text/css" rel="stylesheet">
+.red { color: red; }
+.blue { color: blue; }
+.black { color: black; }
+</style>
+</head>
+<body>
+
+<div id="app">
+<span :class="classname">{{message}}</span>
+<button @click="classname='red'">red</button>
+<button @click="classname='blue'">blue</button>
+<button @click="classname='black'">black</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    classname : 'black',
+    message: 'Hello Vue!'
+  }
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Loops</title>
+<style type="text/css" rel="stylesheet">
+    td { 
+        background-color: #eee; 
+        padding: 5px;
+    }
+    
+</style>
+</head>
+<body>
+
+<div id="app">
+
+    <table>
+        <tr>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+        </tr>
+        <tr v-for="computer in computers">
+            <td>{{computer.make}}</td>
+            <td>{{computer.model}}</td>
+            <td>{{computer.year}}</td>
+        </tr>
+    </table>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    computers : [
+        {
+            make : "Tandy",
+            model : "Color Computer 3",
+            year : 1986
+        },
+        {
+            make : "Commodore",
+            model : "64",
+            year : 1982
+        },
+        {
+            make : "Apple",
+            model : "IIe",
+            year : 1983
+        },
+    ],
+  }
+})
+</script>
+</body>
+</html>
