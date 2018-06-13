@@ -1,1 +1,2 @@
-# 06-2018-Vue.js
+This repo shows the prsentation JT Smith gave at MadMongers on June 12, 2018 about Vue.js.
+
